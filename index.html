@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Icon+Sound Draft</title>
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="image-container"><img id="img1" src="img/Animals/1.Whale-shark.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="img2" src="img/Animals/2.Parrot.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/Animals/3.Shark.png" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img src="img/Animals/4.Eel.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/Animals/5.Crab.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/Animals/6.Bat.png" height="200" width="200"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container">
+                <img id="Whale" src="img/Animals/7.Whale.png" height="200" width="200"
+                    onclick="this.src='img/Maps/7.Whale-Map.png';"
+                    onmouseout="this.src='img/Animals/7.Whale.png';"
+                /></div>
+            <div class="image-container"><img src="img/Animals/9.Turtle.png" height="200" width="200"/></div>
+            <div class="image-container">
+                <img id="Curlew" src="img/Animals/10.Curlew.png" height="200" width="200"
+                    onclick= "this.src='img/Maps/9.Curlew-Map.png';"
+                    onmouseout= "this.src='img/Animals/10.Curlew.png';"
+                />
+            </div>
+        </div>
+
+       <script>
+            var sound1 = new buzz.sound("");
+            var sound2 = new buzz.sound("sound/glitch2.mp3");
+            var sound3 = new buzz.sound("sound/glitch3.mp3");
+            var sound4 = new buzz.sound("sound/glitch1.mp3");
+            var sound5 = new buzz.sound("sound/glitch2.mp3");
+            var sound6 = new buzz.sound("sound/glitch3.mp3");
+            var sound7 = new buzz.sound("Sounds/Whale.mp3");
+            var sound8 = new buzz.sound("sound/glitch2.mp3");
+            var sound9 = new buzz.sound("Sounds/Far-Eastern-Curlew.mp3");
+    
+    
+    window.onload = function() {
+        
+        document.getElementById("Whale").addEventListener('click', function () {sound7.play();});
+        document.getElementById("Curlew").addEventListener('click', function () {sound9.play();}); 
+    }
+
+</script>  
+        
+    </body>
+    
+</html>
